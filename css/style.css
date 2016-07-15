@@ -1,0 +1,345 @@
+body{
+	margin:0;
+	padding: 0;
+}
+.group {
+	width: 800px;
+	height: 300px;
+	margin: 0 auto;
+	padding: 50px;
+}
+.group .effect{
+	width: 220px;
+	height: 220px;
+	float: left;
+	position: absolute;
+}
+.group .effectr{
+	margin-left:500px;
+}
+.border{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+.img-wrap img{
+	width: 200px;
+	height: 200px;
+	border-radius:50%;
+}
+.img-wrap-z img{
+	width: 220px;
+	height: 220px;
+}
+.img-wrap-z:before{
+	position: absolute;
+	content:"";
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6);
+
+}
+.change-img{
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+	border-radius:50%;
+	background:rgba(0,0,0,0.3);
+	text-align: center;
+	opacity:0;
+	pointer-events: none;
+}
+/*第一种*/
+.effect1 .img-wrap{
+	position: absolute;
+	top:10px;
+	left:10px;
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+	border-radius:50%;
+}	
+.effect1 .border{
+	border:10px solid red;
+	border-top-color:green;
+	border-left-color:green;
+	-webkit-transition:all 0.8s ease-in-out;
+}
+.effect1 .change-img{
+	position: absolute;
+	top:10px;
+	left:10px;
+	-webkit-transition:all 0.8s ease-in-out;
+}
+.effect1:hover .change-img{
+	opacity: 1;
+}
+.effect1:hover .border{
+	-webkit-transform:rotate(180deg);
+}
+/*第二种*/
+.effect2 .img-wrap{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 220px;
+	height: 220px;
+	border-radius:50%;
+	box-sizing: border-box;
+	box-shadow: 0  0 10px rgba(255,0,0,0.3) inset;
+	-webkit-transition:all 0.35s ease-in-out;
+}	
+
+.effect2 .change-img{
+	position: absolute;
+	top:0;
+	left:-220px;
+	width: 220px;
+	height:220px;
+	-webkit-transition:all 0.35s ease-in-out;
+}
+.effect2:hover .change-img{
+		opacity:1;
+		-webkit-transform:translate(220px);
+}
+.effect2:hover .img-wrap{
+	-webkit-transform:rotate(180deg);
+}
+/*第三种*/
+.effect3 .change-img{
+
+	position: absolute;
+	top:0;
+	left:220px;
+	width: 220px;
+	height:220px;
+	background-color: black;
+	color: red;
+	-webkit-transition:all 0.35s ease-in-out;
+}
+.change-img .text{
+	font-size:10px;
+	pointer-events:auto;
+}
+.text img{
+	pointer-events: none;
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	top:55px;
+	left:55px;
+	opacity: 1;
+	border-radius: 50%;
+	-webkit-transition:all 0.1s ease-in-out;
+}
+ .change-img:hover img{
+	opacity: 1;
+	-webkit-transform:scale(2);
+}
+.effect3 .img-wrap{
+	-webkit-transition:all 0.35s ease-in-out;
+}
+.effect3:hover .img-wrap{
+	z-index: 1;
+	position: absolute;
+	-webkit-transform:scale(0.5) translateX(-100%);
+
+}
+.effect3:hover .change-img{
+	opacity: 1;
+	-webkit-transform:translateX(-100%);
+}
+/*第四种*/
+.effect4 .change-img{
+	position: absolute;
+	top:-220px;
+	width: 220px;
+	height: 220px;
+	background-image: url(../img/cd.jpg);
+	-webkit-transition:all 0.35s ease-in-out;
+}
+.effect4 .img-wrap{
+	-webkit-transition:all 0.35s ease-in-out;
+}
+.effect4:hover .img-wrap{
+	-webkit-transform:translateY(100%);
+	opacity: 0;
+}
+.effect4:hover .change-img{
+	-webkit-transform:translateY(100%);
+	opacity: 1;
+}
+/*第五种*/
+.effect5 .change-img{
+	width: 220px;
+	height: 220px;
+	position: absolute;
+	top:0;
+	left:0;
+	-webkit-transform-style:-webkit-preserve-3d;
+	-webkit-transform:rotateY(90deg);
+	-webkit-transition:all 0.35s ease-in-out;
+}
+.change-img-more .text{
+	font-size:20px;
+	font-weight: 700;
+	color: white;
+}
+.change-img-more div{
+	font-size:14px;
+	text-shadow: 5px 5px 3px red;
+}
+.effect5:hover .change-img{
+	opacity: 1;
+	-webkit-transform:rotateY(0deg);
+}
+/*第六种*/
+.effect6 .img-wrap{
+	-webkit-transition:all 0.35s ease-in-out;
+}
+.effect6:hover .img-wrap{
+	-webkit-transform:scale(1.5);
+	opacity: 0;
+}
+.effect6 .change-img{
+	background-image: url(../img/tao.jpg);
+	background-size: 110px;
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	top:55px;
+	left: 55px;
+	-webkit-transition:all 0.35s ease-in-out;
+}
+.effect6:hover .change-img{
+	opacity: 1;
+	-webkit-transform:scale(2);
+}
+/*第七种*/
+.effect7 .change-img{
+	width: 220px;
+	height: 220px;
+	position: absolute;
+	top:0;
+	left:0;
+	opacity: 1;
+	background-image: url(../img/tao.jpg);
+}
+#text-lead{
+	margin: 30px 20px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.effect7 .img-wrap{
+	top:0;
+	left:0;
+	height: 220px;
+	position: absolute;
+	-webkit-transform-style:-webkit-preserve-3d;
+	-webkit-transform-origin:right;
+	-webkit-transition:all 0.35s ease-in;
+}
+.effect7:hover .img-wrap{
+	-webkit-transform: rotate3d(0, 1, 0, 180deg);;
+	
+}
+/*第八种*/
+.effect8 .img-wrap{
+	width: 220px;
+	height: 220px;
+}
+.effect8 img{
+	background-image: url(../img/hua.jpg);
+	background-size: 220px;
+	-webkit-transition: all 0.35s ease-in-out;
+}
+.effect8:hover img{
+	-webkit-transform:scale(1.2);
+	overflow: hidden;
+}
+.effect8 .text{
+	width: 200px;
+	font-size: 40px;
+	color: black;
+	font-weight: 700;
+	text-align: center;
+	position: absolute;
+	left:-200px;
+	top:50px;
+	opacity: 0;
+	-webkit-transition: all 0.35s ease-in-out;
+}
+.effect8:hover .text{
+	opacity: 1;
+	-webkit-transform:translateX(220px);
+}
+.effect8 .more{
+	width: 200px;
+	font-size: 40px;
+	color: red;
+	text-align: center;
+	position: absolute;
+	right:-200px;
+	bottom:100px;
+	opacity: 0;
+	-webkit-transition: all 0.35s ease-in-out;
+}
+.effect8:hover .more{
+	opacity: 1;
+	-webkit-transform:translateX(-200px);
+}
+/*第九种*/
+.effect9 .change-img{
+	position: absolute;
+	top:55px;
+	left:165px;
+	width: 110px;
+	height:110px;
+	color: red;
+	background-image: url(../img/tao.jpg);
+	background-size: 110px;
+	-webkit-transition:all 0.35s ease-in-out 0.35s;
+}
+.effect9 .img-wrap{
+	-webkit-transition:all 0.35s ease-in-out;
+}
+.effect9:hover .img-wrap{
+	-webkit-transform:scale(0.5) ;
+
+}
+.effect9:hover .change-img{
+	opacity: 1;
+	-webkit-transform: scale(2) translateX(-50%);
+}
+/*第十种*/
+.effect10 .img-wrap{
+	-webkit-transform-style:-webkit-preserve-3d;
+	-webkit-transform-origin:50% 0%;
+	-webkit-transition:0.3s ease-out ;
+}
+.effect10:hover .img-wrap{
+	-webkit-transform:translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+}
+.effect10 .change-img{
+	opacity: 1;
+	position: absolute;
+	top:0;
+	left: 0;
+	-webkit-transform-style:-webkit-preserve-3d;
+	-webkit-transform-origin:bottom;
+	-webkit-transform:translate3d(0, 20px, 0) rotate3d(1, 0, 0, -90deg);;
+	-webkit-transition:0.3s linear ;
+}
+.effect10 .change-img img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+.effect10:hover .change-img{
+	-webkit-transform:rotate3d(0, 0, 0, 0deg) translate3d(0, 0, 0) ;
+
+}
